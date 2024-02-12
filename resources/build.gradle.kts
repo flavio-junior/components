@@ -4,6 +4,8 @@ plugins {
     id("maven-publish")
 }
 
+apply(from = "${project.rootDir}/config/detekt/detekt.gradle")
+
 android {
     namespace = "br.com.resources"
     compileSdk = 34
