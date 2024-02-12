@@ -58,12 +58,35 @@ dependencies {
 publishing {
     publications {
         register<MavenPublication>("release") {
-            groupId = "com.github.flavio-junior"
-            artifactId = "br.com.resources"
+            groupId = "br.com.github.flavio-junior"
+            artifactId = "br.com.components"
+            description = "Library to sharing data"
             version = "1.0"
 
             afterEvaluate {
                 from(components["release"])
+            }
+        }
+
+        create<MavenPublication>("mavenJava") {
+            pom {
+                name.set("Components")
+                description.set("Library to sharing data")
+                url.set("https://github.com/flavio-junior/components")
+
+                licenses {
+                    license {
+                        name.set("The Apache License, Version 2.0")
+                        url.set("https://github.com/flavio-junior/components/blob/main/LICENSE")
+                    }
+                }
+                developers {
+                    developer {
+                        id.set("flavio-junior")
+                        name.set("Flávio Júnior")
+                        email.set("flaviojunior.work@gmail.com")
+                    }
+                }
             }
         }
     }
