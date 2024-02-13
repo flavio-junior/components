@@ -1,5 +1,6 @@
 package br.com.resources.pieces
 
+import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 
@@ -37,3 +38,5 @@ object SpaceSize {
     val spaceSize150: Dp = 150.dp
     val spaceSize200: Dp = 200.dp
 }
+
+val LocalSpaces = staticCompositionLocalOf { SpaceSize }

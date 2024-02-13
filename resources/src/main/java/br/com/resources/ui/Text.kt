@@ -2,12 +2,16 @@ package br.com.resources.ui
 
 import androidx.compose.foundation.text.BasicText
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
+import androidx.compose.runtime.compositionLocalOf
+import androidx.compose.runtime.structuralEqualityPolicy
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import br.com.resources.R
-import br.com.resources.pieces.Typography
+import br.com.resources.typography.Typography
 
 @Preview(showBackground = true)
 @Composable
@@ -91,4 +95,12 @@ fun SimpleText(
         style = Typography(textAlign = textAlign).simpleText,
         maxLines = maxLines
     )
+}
+
+val LocalTextStyleDefault = compositionLocalOf(structuralEqualityPolicy()) { TextStyle.Default }
+
+@Composable
+fun ProvideTextStyleDefault(value: TextStyle, content: @Composable () -> Unit) {
+    val mergedStyle = LocalTextStyleDefault.current.merge(value)
+    CompositionLocalProvider(LocalTextStyleDefault provides mergedStyle, content = content)
 }

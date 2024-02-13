@@ -1,5 +1,6 @@
-package br.com.resources.pieces
+package br.com.resources.typography
 
+import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.Font
@@ -10,6 +11,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.TextUnit
 import br.com.resources.R
+import br.com.resources.pieces.FontSize
 
 private val fontSize = FontSize
 
@@ -62,4 +64,8 @@ data class Typography(val textAlign: TextAlign? = null) {
         fontStyle = FontStyle.Normal,
         letterSpacing = TextUnit.Unspecified
     )
+}
+
+val LocalTypography = staticCompositionLocalOf {
+    Typography()
 }

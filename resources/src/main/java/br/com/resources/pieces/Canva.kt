@@ -1,4 +1,4 @@
-package br.com.resources.utils
+package br.com.resources.pieces
 
 import android.annotation.SuppressLint
 import androidx.compose.foundation.BorderStroke
@@ -17,7 +17,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.unit.Dp
-import br.com.resources.pieces.SpaceSize
 
 @SuppressLint("ModifierFactoryUnreferencedReceiver")
 fun Modifier.onClickable(onClick: () -> Unit): Modifier {
