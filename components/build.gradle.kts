@@ -7,7 +7,7 @@ plugins {
 apply(from = "${project.rootDir}/config/detekt/detekt.gradle")
 
 android {
-    namespace = "br.com.resources"
+    namespace = "br.com.components"
     compileSdk = 34
 
     defaultConfig {

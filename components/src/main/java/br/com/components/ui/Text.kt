@@ -10,8 +10,8 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
+import br.com.components.R
 import br.com.components.typography.Typography
-import br.com.resources.R
 
 @Preview(showBackground = true)
 @Composable
