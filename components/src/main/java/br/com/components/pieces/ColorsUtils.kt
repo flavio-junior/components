@@ -1,4 +1,4 @@
-package br.com.resources.pieces
+package br.com.components.pieces
 
 object ColorsUtils {
     const val LIGHT_PRIMARY = "#000000"

@@ -15,4 +15,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "components"
 include(":app")
-include(":resources")
+include(":components")

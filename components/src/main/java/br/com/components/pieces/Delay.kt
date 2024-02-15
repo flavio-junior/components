@@ -1,4 +1,4 @@
-package br.com.resources.pieces
+package br.com.components.pieces
 
 import kotlinx.coroutines.delay
 

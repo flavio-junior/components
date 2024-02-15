@@ -1,4 +1,4 @@
-package br.com.resources.pieces
+package br.com.components.pieces
 
 import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.unit.Dp

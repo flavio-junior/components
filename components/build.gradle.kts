@@ -42,8 +42,7 @@ android {
 }
 
 dependencies {
-
-    implementation("androidx.core:core-ktx:1.9.0")
+    implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.11.0")
     implementation("androidx.activity:activity-compose:1.8.2")
@@ -62,7 +61,7 @@ publishing {
         register<MavenPublication>("release") {
             groupId = "br.com.github.flavio-junior"
             artifactId = "br.com.components"
-            description = "Library to sharing data"
+            description = "Library to sharing components"
             version = "1.0"
 
             afterEvaluate {
@@ -73,7 +72,7 @@ publishing {
         create<MavenPublication>("mavenJava") {
             pom {
                 name.set("Components")
-                description.set("Library to sharing data")
+                description.set("Library to sharing components")
                 url.set("https://github.com/flavio-junior/components")
 
                 licenses {
@@ -82,6 +81,7 @@ publishing {
                         url.set("https://github.com/flavio-junior/components/blob/main/LICENSE")
                     }
                 }
+
                 developers {
                     developer {
                         id.set("flavio-junior")

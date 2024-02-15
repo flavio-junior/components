@@ -1,4 +1,4 @@
-package br.com.resources.pieces
+package br.com.components.pieces
 
 import android.annotation.SuppressLint
 import androidx.compose.foundation.BorderStroke

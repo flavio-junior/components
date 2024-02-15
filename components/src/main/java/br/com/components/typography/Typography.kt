@@ -1,4 +1,4 @@
-package br.com.resources.typography
+package br.com.components.typography
 
 import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.graphics.Color
@@ -10,8 +10,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.TextUnit
+import br.com.components.pieces.FontSize
 import br.com.resources.R
-import br.com.resources.pieces.FontSize
 
 private val fontSize = FontSize
 

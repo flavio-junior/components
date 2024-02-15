@@ -1,4 +1,4 @@
-package br.com.resources.color
+package br.com.components.color
 
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -48,7 +48,7 @@ class Color(
         isLight = isLight
     )
 
-    fun updateColorsFrom(other: br.com.resources.color.Color) {
+    fun updateColorsFrom(other: br.com.components.color.Color) {
         primary = other.primary
         text = other.text
         success = other.success
