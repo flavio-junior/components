@@ -27,10 +27,10 @@ class MainActivity : ComponentActivity() {
                     color = DefaultThemes.color.background
                 ) {
                     Column(modifier = Modifier.padding(SpaceSize.spaceSize16)) {
-                        Title(title = stringResource(id = R.string.app_name))
-                        SubTitle(subTitle = stringResource(id = R.string.app_name))
-                        Description(description = stringResource(id = R.string.app_name))
-                        SimpleText(text = stringResource(id = R.string.app_name))
+                        Title(title = stringResource(id = R.string.template))
+                        SubTitle(subTitle = stringResource(id = R.string.template))
+                        Description(description = stringResource(id = R.string.template))
+                        SimpleText(text = stringResource(id = R.string.template))
                     }
                 }
             }
