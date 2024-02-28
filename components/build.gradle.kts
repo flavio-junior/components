@@ -62,7 +62,7 @@ publishing {
             groupId = "br.com.github.flavio-junior"
             artifactId = "br.com.components"
             description = "Library to sharing components"
-            version = "1.0"
+            version = "1.1"
 
             afterEvaluate {
                 from(components["release"])
