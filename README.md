@@ -1,5 +1,7 @@
 # Library to sharing data in compose
 
+[![](https://jitpack.io/v/flavio-junior/components.svg)](https://jitpack.io/#flavio-junior/components)
+
 **Step 1. Add the JitPack repository to your build file. Add it in your root settings.gradle.kts at the end of repositories:**
 ```gradle
 dependencyResolutionManagement {
