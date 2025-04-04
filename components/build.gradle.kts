@@ -48,17 +48,18 @@ dependencies {
     implementation("androidx.compose.material3:material3")
 }
 
-publishing {
-    publications {
-        register<MavenPublication>("release") {
-            groupId = "br.com.github.flavio-junior"
-            artifactId = "components"
-            description = "Library to sharing components in Compose"
-            version = "1.0.0"
-            afterEvaluate {
+afterEvaluate {
+    publishing {
+        publications {
+            create<MavenPublication>("release") {
+                groupId = "br.com.github.flavio-junior"
+                artifactId = "components"
+                description = "Library to sharing components in Compose"
+                version = "1.0.2"
                 from(components["release"])
             }
         }
+
         repositories {
             maven {
                 name = "GitHubPackages"
