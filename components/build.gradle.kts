@@ -55,7 +55,7 @@ afterEvaluate {
                 groupId = "br.com.github.flavio-junior"
                 artifactId = "components"
                 description = "Library to sharing components in Compose"
-                version = "1.0.2"
+                version = "1.0.0"
                 from(components["release"])
             }
         }
