@@ -32,11 +32,20 @@ object SpaceSize {
     val spaceSize56: Dp = 56.dp
     val spaceSize60: Dp = 60.dp
     val spaceSize64: Dp = 64.dp
+    val spaceSize72: Dp = 72.dp
+    val spaceSize80: Dp = 80.dp
     val spaceSize96: Dp = 96.dp
     val spaceSize100: Dp = 100.dp
     val spaceSize128: Dp = 128.dp
+    val spaceSize164: Dp = 164.dp
     val spaceSize150: Dp = 150.dp
+    val spaceSize192: Dp = 192.dp
     val spaceSize200: Dp = 200.dp
+    val spaceSize250: Dp = 250.dp
+    val spaceSize256: Dp = 250.dp
+    val spaceSize300: Dp = 300.dp
+    val spaceSize400: Dp = 400.dp
+    val spaceSize500: Dp = 500.dp
 }
 
 val LocalSpaces = staticCompositionLocalOf { SpaceSize }

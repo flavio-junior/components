@@ -6,18 +6,33 @@ import androidx.compose.runtime.setValue
 import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.graphics.Color
 
-class Color(
+val DarkColor = Colors(
+    primary = Color(color = 0xFFf2f2f2),
+    secondary = Color(color = 0xFFe8702a),
+    background = Color(color = 0xFF000000),
+    success = Color(color = 0xFFBBE580),
+    error = Color(color = 0xFFFF0000)
+)
+
+val LightColor = Colors(
+    primary = Color(color = 0xFF000000),
+    secondary = Color(color = 0xFFe8702a),
+    background = Color(color = 0xFFf2f2f2),
+    success = Color(color = 0xFFBBE580),
+    error = Color(color = 0xFFFF0000)
+)
+
+class Colors(
     primary: Color,
-    text: Color,
+    secondary: Color,
     background: Color,
     success: Color,
     error: Color,
-    isLight: Boolean,
 ) {
     var primary by mutableStateOf(primary)
         private set
 
-    var text by mutableStateOf(text)
+    var secondary by mutableStateOf(secondary)
         private set
 
     var success by mutableStateOf(success)
@@ -29,33 +44,27 @@ class Color(
     var background by mutableStateOf(background)
         private set
 
-    var isLight by mutableStateOf(isLight)
-        private set
-
     fun copy(
         primary: Color = this.primary,
-        text: Color = this.text,
+        secondary: Color = this.secondary,
         background: Color = this.background,
         success: Color = this.success,
-        error: Color = this.error,
-        isLight: Boolean = this.isLight,
-    ) = Color(
+        error: Color = this.error
+    ) = Colors(
         primary = primary,
-        text = text,
+        secondary = secondary,
         background = background,
         success = success,
-        error = error,
-        isLight = isLight
+        error = error
     )
 
-    fun updateColorsFrom(other: br.com.components.color.Color) {
+    fun updateColorsFrom(other: Colors) {
         primary = other.primary
-        text = other.text
+        secondary = other.secondary
         success = other.success
         background = other.background
         error = other.error
-        isLight = other.isLight
     }
 }
 
-val LocalColors = staticCompositionLocalOf { ColorTheme.lightColor() }
+val LocalColors = staticCompositionLocalOf { LightColor }

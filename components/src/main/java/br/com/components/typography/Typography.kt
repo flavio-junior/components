@@ -12,54 +12,95 @@ import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.TextUnit
 import br.com.components.R
 import br.com.components.pieces.FontSize
+import br.com.components.pieces.TypeFont
 
 private val fontSize = FontSize
 
-data class Typography(val textAlign: TextAlign? = null) {
+data class Typography(
+    val color: Color = Color.Black,
+    val textAlign: TextAlign = TextAlign.Start,
+    val typeFont: TypeFont? = null
+) {
 
     val title: TextStyle = TextStyle(
-        color = Color.Black,
+        color = color,
         fontSize = fontSize.fontSize32,
         fontWeight = FontWeight.SemiBold,
-        textAlign = textAlign ?: TextAlign.Start,
+        textAlign = textAlign,
         lineHeight = TextUnit.Unspecified,
-        fontFamily = FontFamily(Font(R.font.onest_bold)),
+        fontFamily = selectFontFamily(typeFont = typeFont ?: TypeFont.ONEST_BOLD),
         textDecoration = TextDecoration.None,
         fontStyle = FontStyle.Normal,
         letterSpacing = TextUnit.Unspecified
     )
 
     val subTitle: TextStyle = TextStyle(
-        color = Color.Black,
+        color = color,
         fontSize = fontSize.fontSize24,
         fontWeight = FontWeight.Medium,
-        textAlign = textAlign ?: TextAlign.Start,
+        textAlign = textAlign,
         lineHeight = TextUnit.Unspecified,
-        fontFamily = FontFamily(Font(R.font.onest_medium)),
+        fontFamily = selectFontFamily(typeFont = typeFont ?: TypeFont.ONEST_MEDIUM),
         textDecoration = TextDecoration.None,
         fontStyle = FontStyle.Normal,
         letterSpacing = TextUnit.Unspecified
     )
 
     val description: TextStyle = TextStyle(
-        color = Color.Black,
+        color = color,
         fontSize = fontSize.fontSize20,
         fontWeight = FontWeight.Bold,
-        textAlign = textAlign ?: TextAlign.Start,
+        textAlign = textAlign,
         lineHeight = TextUnit.Unspecified,
-        fontFamily = FontFamily(Font(R.font.onest_regular)),
+        fontFamily = selectFontFamily(typeFont = typeFont ?: TypeFont.ONEST_REGULAR),
         textDecoration = TextDecoration.None,
         fontStyle = FontStyle.Normal,
         letterSpacing = TextUnit.Unspecified
     )
 
     val simpleText: TextStyle = TextStyle(
-        color = Color.Black,
+        color = color,
         fontSize = fontSize.fontSize16,
         fontWeight = FontWeight.Bold,
-        textAlign = textAlign ?: TextAlign.Start,
+        textAlign = textAlign,
         lineHeight = TextUnit.Unspecified,
-        fontFamily = FontFamily(Font(R.font.onest_regular)),
+        fontFamily = selectFontFamily(typeFont = typeFont ?: TypeFont.ONEST_REGULAR),
+        textDecoration = TextDecoration.None,
+        fontStyle = FontStyle.Normal,
+        letterSpacing = TextUnit.Unspecified
+    )
+
+    val infoText: TextStyle = TextStyle(
+        color = color,
+        fontSize = fontSize.fontSize14,
+        fontWeight = FontWeight.Bold,
+        textAlign = textAlign,
+        lineHeight = TextUnit.Unspecified,
+        fontFamily = selectFontFamily(typeFont = typeFont ?: TypeFont.ONEST_BOLD),
+        textDecoration = TextDecoration.None,
+        fontStyle = FontStyle.Normal,
+        letterSpacing = TextUnit.Unspecified
+    )
+
+    val smallText: TextStyle = TextStyle(
+        color = color,
+        fontSize = fontSize.fontSize12,
+        fontWeight = FontWeight.Bold,
+        textAlign = textAlign,
+        lineHeight = TextUnit.Unspecified,
+        fontFamily = selectFontFamily(typeFont = typeFont ?: TypeFont.ONEST_BOLD),
+        textDecoration = TextDecoration.None,
+        fontStyle = FontStyle.Normal,
+        letterSpacing = TextUnit.Unspecified
+    )
+
+    val miniText: TextStyle = TextStyle(
+        color = color,
+        fontSize = fontSize.fontSize8,
+        fontWeight = FontWeight.Bold,
+        textAlign = textAlign,
+        lineHeight = TextUnit.Unspecified,
+        fontFamily = selectFontFamily(typeFont = typeFont ?: TypeFont.ONEST_BOLD),
         textDecoration = TextDecoration.None,
         fontStyle = FontStyle.Normal,
         letterSpacing = TextUnit.Unspecified
@@ -68,4 +109,12 @@ data class Typography(val textAlign: TextAlign? = null) {
 
 val LocalTypography = staticCompositionLocalOf {
     Typography()
+}
+
+private fun selectFontFamily(typeFont: TypeFont): FontFamily {
+    return when (typeFont) {
+        TypeFont.ONEST_BOLD -> FontFamily(Font(R.font.onest_bold))
+        TypeFont.ONEST_MEDIUM -> FontFamily(Font(R.font.onest_medium))
+        TypeFont.ONEST_REGULAR -> FontFamily(Font(R.font.onest_regular))
+    }
 }
