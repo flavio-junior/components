@@ -63,7 +63,7 @@ afterEvaluate {
         repositories {
             maven {
                 name = "GitHubPackages"
-                url = uri("https://maven.pkg.github.com/flavio-junior/components")
+                url = uri("https://maven.pkg.github.com/flavio-junior/design-system-components-android-native-jetpack-compose")
                 credentials {
                     username = System.getenv("ENVIRONMENT_USERNAME")
                     password = System.getenv("ENVIRONMENT_TOKEN")
