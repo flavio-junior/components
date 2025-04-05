@@ -1,4 +1,4 @@
 jdk:
   - openjdk21
 install:
-  - ./gradlew :components:assembleRelease
+  - ./gradlew publishReleasePublicationToMavenLocal

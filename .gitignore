@@ -11,7 +11,10 @@
 *.rar
 
 /app/build
-!components/components/build/outputs/aar/components-release.aar
+/components/build/
+/components/build/**/*
+!/components/build/outputs/aar/components-release.aar
+!/components/build/publications/release/**
 
 *.idea
 *.gradle
