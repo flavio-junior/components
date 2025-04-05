@@ -10,6 +10,9 @@
 *.tar.gz
 *.rar
 
+/app/build
+!components/components/build/outputs/aar/components-release.aar
+
 *.idea
 *.gradle
 *local.properties
