@@ -55,7 +55,7 @@ afterEvaluate {
                 from(components["release"])
                 groupId = "com.github.flavio-junior"
                 artifactId = "design-system-components-android-native-jetpack-compose"
-                version = "1.0.4-alpha"
+                version = "v1.0.5-alpha"
             }
         }
     }
