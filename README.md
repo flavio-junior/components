@@ -1,11 +1,11 @@
-# Library to sharing data in compose
+# Library to sharing components of design system in jetpack compose
 
-[![](https://jitpack.io/v/flavio-junior/components.svg)](https://jitpack.io/#flavio-junior/components)
+[![](https://jitpack.io/v/flavio-junior/components.svg)](https://jitpack.io/#flavio-junior/design-system-components-android-native-jetpack-compose)
 
 **Implementing dependency in project:**
 ```gradle
 dependencies {
-  implementation 'br.com.github.flavio-junior:components:1.0.0'
+  implementation 'com.github.flavio-junior:design-system-components-android-native-jetpack-compose:Tag'
 }
 ```
 
