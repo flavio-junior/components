@@ -48,27 +48,14 @@ dependencies {
     implementation("androidx.compose.material3:material3")
 }
 
-publishing {
-    publications {
-        create<MavenPublication>("release") {
-            groupId = "br.com.github.flavio-junior"
-            artifactId = "components"
-            description = "Library to sharing components in Compose"
-            version = "1.0.0-alpha"
-            afterEvaluate {
+afterEvaluate {
+    publishing {
+        publications {
+            create<MavenPublication>("release") {
                 from(components["release"])
-            }
-        }
-    }
-
-    repositories {
-        maven {
-            name = "GitHubPackages"
-            url =
-                uri("https://maven.pkg.github.com/flavio-junior/design-system-components-android-native-jetpack-compose")
-            credentials {
-                username = System.getenv("ENVIRONMENT_USERNAME")
-                password = System.getenv("ENVIRONMENT_TOKEN")
+                groupId = "com.github.flavio-junior"
+                artifactId = "design-system-components-android-native-jetpack-compose"
+                version = "1.0.1-alpha"
             }
         }
     }
